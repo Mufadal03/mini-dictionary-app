@@ -2,7 +2,7 @@ import * as data from "./actionTypes"
 
 const initialState = {
     Loading: false,
-    data: [],
+    data: {},
     Error: false,
     ErrorMessage:null
 }
@@ -19,7 +19,7 @@ export const reducer = (state = initialState, { type, payload }) => {
             return {
                 ...state,
                 Loading: false,
-                data: [...payload]
+                data: {...payload}
             }
         }
         case data.GET_WORD_FAILURE: {
