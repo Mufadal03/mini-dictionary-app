@@ -1,8 +1,7 @@
-import axios from 'axios';
 import { useEffect } from 'react';
 import './App.css';
 import {useDispatch} from "react-redux"
-import { getWordOfTheDay } from './redux/WordRedux/action';
+import AllRoutes from './Routes/AllRoutes';
 
 function App() {
   const dispatch = useDispatch()
@@ -11,8 +10,8 @@ function App() {
 
   },[])
   return (
-    <div className="App">
-      <h1>{process.env.REACT_APP_TITLE}</h1>
+    <div>
+     <AllRoutes />
     </div>
   );
 }
