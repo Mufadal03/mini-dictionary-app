@@ -8,7 +8,28 @@ const initialState = {
 }
 
 export const reducer = (state = initialState, { type, payload }) => {
-    switch (type){
+    switch (type) {
+        case data.GET_WORD_OF_THE_DAY_REQUEST: {
+            return {
+                ...state,
+                Loading:true
+            }
+        }
+        case data.GET_WORD_OF_THE_DAY_SUCCESS: {
+            return {
+                ...state,
+                Loading: false,
+                data: [...payload]
+            }
+        }
+        case data.GET_WORD_OF_THE_DAY_FAILURE: {
+            return {
+                ...state,
+                Loading: false,
+                Error: true,
+                ErrorMessage:payload
+            }
+        }
         default:return state
     }
 }
