@@ -28,6 +28,9 @@ const Word = () => {
   if (Loading) {
     return(<LoadingComp />)
   }
+  // if (Error) {
+  //   return <Error />
+  // }
   // animate__infinite
   return (
     <Box fontFamily={"cursive"}>
