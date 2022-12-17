@@ -3,6 +3,7 @@ import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
+import LoadingComp from './LoadingComp'
 
 const WordOfTheDay = () => {
   const {Data,Loading,Error,ErrorMessage} = useSelector((state) => {
@@ -14,7 +15,7 @@ const WordOfTheDay = () => {
             }
   })
   if (Loading) {
-    return <h1>Loading</h1>
+    return <LoadingComp />
   }
   const singleData = Data?.find((item, i) => i == 1)
   return (
