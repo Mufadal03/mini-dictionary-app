@@ -9,11 +9,9 @@ export const getWordOfTheDay = () => dispatch => {
             'X-RapidAPI-Host': process.env.REACT_APP_RAPID_API_HOST
         }
     }).then((r) => {
-        console.log(r.data)
         dispatch({type:data.GET_WORD_OF_THE_DAY_SUCCESS,payload:r.data})
         
     }).catch((e) => {
-        console.log(e)
         dispatch({type:data.GET_WORD_OF_THE_DAY_FAILURE,payload:e})
     })
 }
