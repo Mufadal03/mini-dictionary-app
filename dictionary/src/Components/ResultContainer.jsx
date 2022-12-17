@@ -14,7 +14,7 @@ const ResultContainer = () => {
             }
     })
   return (
-      <Box  >
+      <Box  pos={'relative'}>
           {Object.keys(Data).length>0?<Word />:<WordOfTheDay />}
     </Box>
   )
