@@ -24,7 +24,7 @@ const SearchBar = () => {
   },[text])
   return (
       <Flex justifyContent={"center"}  p="2rem">
-          <Input value={text} fontFamily="cursive" onChange={(e)=>handleChange(e)} placeholder="Search Word" type='search' borderRadius="none" _focus={{borderColor:"white"}} h="50px" fontSize={"2xl"} w="90%"/>
+          <Input value={text} fontFamily="cursive" onChange={(e)=>handleChange(e)} placeholder="Search Word" type='search' borderRadius="none" _focus={{borderColor:"white"}} h="50px" fontSize={"2xl"} w="100%"/>
     </Flex>
   )
 }
