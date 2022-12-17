@@ -2,6 +2,7 @@ import { Box, Container, Flex, Heading } from '@chakra-ui/react'
 import React from 'react'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import About from '../Components/About'
 import ResultContainer from '../Components/ResultContainer'
 import SearchBar from '../Components/SearchBar'
 import "../index.css"
@@ -12,7 +13,7 @@ const Home = () => {
         dispatch(getWordOfTheDay()) 
     },[])
     return (
-        <Box minH='100vh' bgColor={"#161748"} color="white">
+        <Box minH='100vh' bgColor={"#161748"} color="white" >
             <Box w="70%"  m="auto" pt="2rem" >
                 {/* Heading */}
                 <Flex justifyContent="center">
@@ -26,7 +27,7 @@ const Home = () => {
                 <ResultContainer />
                 {/* Results */}
 
-                
+                <About />
             </Box>
       </Box>
   )

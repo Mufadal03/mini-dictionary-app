@@ -19,6 +19,7 @@ export const reducer = (state = initialState, { type, payload }) => {
             return {
                 ...state,
                 Loading: false,
+                Error:false,
                 data: {...payload}
             }
         }
