@@ -41,6 +41,8 @@
 ![main1](https://user-images.githubusercontent.com/101393298/208250799-8ffd78f9-6acd-4dbf-94b5-1deafdfc3b23.png)
 ## Search Response
 ![main2](https://user-images.githubusercontent.com/101393298/208250802-f3f04137-fc9a-4624-a464-920c98698908.png)
+## With synonyms and antonyms
+![main](https://user-images.githubusercontent.com/101393298/208251451-bdc1776d-a7ba-474e-8412-4f660bc43db1.png)
 
 
 ## Getting Started
