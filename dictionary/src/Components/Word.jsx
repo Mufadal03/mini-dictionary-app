@@ -2,9 +2,9 @@ import { Box, Flex, Heading, Icon } from '@chakra-ui/react'
 import React from 'react'
 import { useSelector } from 'react-redux'
 import Card from './Card'
-import { HiSpeakerWave } from "react-icons/hi"
-import { HiOutlineSearch } from "react-icons/hi"
-import {RxSpeakerLoud} from "react-icons/rx"
+import { RxSpeakerLoud } from "react-icons/rx"
+import 'animate.css';
+import LoadingComp from './LoadingComp'
 const Word = () => {
   let src 
     const {Data,Loading,Error,ErrorMessage} = useSelector((state) => {
@@ -25,11 +25,15 @@ const Word = () => {
     let sound = new Audio(src)
     sound.play()
   }
+  if (Loading) {
+    return(<LoadingComp />)
+  }
+  // animate__infinite
   return (
     <Box fontFamily={"cursive"}>
       <Flex  alignItems={"center"} justifyContent="" py='1rem'>
         <Box flexGrow={"2"} textAlign="center"><Heading fontWeight={"md"} fontFamily="cursive">{word}</Heading></Box>
-        <Box flexGrow={".5"} textAlign="center" >{ src && <Icon onClick={handleClick} cursor='pointer' h="6" w="6" as={RxSpeakerLoud} />}</Box>
+        <Box flexGrow={".5"} >{ src && <Icon className='animate__animated animate__rubberBand animate__delay-2s  animate__infinite' onClick={handleClick} cursor='pointer' h="6" w="6" as={RxSpeakerLoud} />}</Box>
       </Flex>
       <Flex direction={"column"} gap="1.5rem" p="2rem">
         {
