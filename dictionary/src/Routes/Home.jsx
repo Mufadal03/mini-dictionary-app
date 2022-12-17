@@ -12,7 +12,7 @@ const Home = () => {
         dispatch(getWordOfTheDay()) 
     },[])
     return (
-        <Box minH='100vh'bgColor={"#161748"} color="white">
+        <Box minH='100vh' bgColor={"#161748"} color="white">
             <Box w="70%"  m="auto" pt="2rem" >
                 {/* Heading */}
                 <Flex justifyContent="center">
