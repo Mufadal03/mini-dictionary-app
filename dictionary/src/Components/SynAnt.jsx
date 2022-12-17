@@ -5,7 +5,7 @@ const SynAnt = ({data,role}) => {
   return (
       <Box mt="1rem">
           <Flex>
-              <Text fontSize={"xl"} borderBottom="1px solid" mr="0.5rem">{role}:- </Text>
+              <Text fontSize={"xl"} borderBottom="1px solid" mr="0.5rem" fontStyle={"italic"}>{role}:- </Text>
               <Flex gap="1rem">
                   {
                       data.map((item, i) => {
